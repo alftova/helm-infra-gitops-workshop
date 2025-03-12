@@ -19,3 +19,13 @@ global:
   argocd:
     enabled: true
     controller: openshift-gitops #argocd
+
+oauth:
+  enabled: true # Enable dependency
+  keycloak: # Update chart values
+    clientid: myclient-19
+    issuer: https://keycloak-keycloak.apps.argo-hub.sandbox2414.opentlc.com/realms/myrealm-19;
+    data: Kd3WD9rxh6tiIwQIsVertthsC5dhbRha
+  ldap:
+    sync:
+      ldap_url: 'ldap://10.0.76.253:30389'
